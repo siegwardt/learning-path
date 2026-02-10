@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="de-DE">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Learning App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main class="main">
+        <form id="loginForm" class="login-form" novalidate>
+            <h1>Login</h1>
+            
+            <div class="form-group">
+                <label for="email">Email Address:</label>
+                <input 
+                    type="email" 
+                    id="email" 
+                    name="email" 
+                    placeholder="your.email@example.com"
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input 
+                    type="password"
+                    id="password"
+                    name="password"
+                    placeholder="*****************"
+                >
+            </div>
+
+            <button type="submit">Submit</button>
+        </form>
+    </main>
+    <script type="module" src="script.ts"></script>
+</body>
+</html>

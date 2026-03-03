@@ -1,0 +1,113 @@
+:root {
+  --color-primary: #2563eb;
+  --color-primary-hover: #1d4ed8;
+  --color-background: #f4f7ff;
+  --color-card: #ffffff;
+  --color-text: #0f172a;
+  --color-border: #cbd5e1;
+  --color-error: #ef4444;
+  --color-input-bg: #f8fafc;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.page {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  background: var(--color-background);
+}
+
+.card {
+  width: 100%;
+  max-width: 420px;
+  padding: 24px;
+  background: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.10);
+}
+
+.title {
+  margin: 0 0 24px 0;
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--color-text);
+  text-align: center;
+}
+
+.field {
+  margin-bottom: 20px;
+}
+
+.field label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-text);
+}
+
+.field input {
+  width: 100%;
+  padding: 12px 16px;
+  font-size: 16px;
+  border-radius: 12px;
+  border: 1px solid var(--color-border);
+  background: var(--color-input-bg);
+  outline: none;
+}
+
+.field input:focus {
+  border-color: var(--color-primary);
+  outline: 3px solid rgba(37, 99, 235, 0.25);
+  outline-offset: 2px;
+}
+
+.field input[aria-invalid="true"] {
+  border-color: var(--color-error);
+  outline: 3px solid rgba(239, 68, 68, 0.18);
+  outline-offset: 2px;
+}
+
+.error {
+  margin: 8px 0 0 0;
+  font-size: 13px;
+  color: var(--color-error);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.error.visible {
+  opacity: 1;
+}
+
+.btn {
+  width: 100%;
+  padding: 14px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  color: white;
+  background: var(--color-primary);
+}
+
+.btn:hover:not(:disabled) {
+  background: var(--color-primary-hover);
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+@media (max-width: 480px) {
+  .page { padding: 16px; }
+  .card { padding: 20px; }
+  .title { font-size: 22px; }
+}
